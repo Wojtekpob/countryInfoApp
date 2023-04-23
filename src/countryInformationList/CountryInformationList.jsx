@@ -17,10 +17,10 @@ function CountryInformationList({ countriesData }) {
   return (
     <div className={"countryBox"}>
       {countriesData.map((country) => (
-        <div className={"country"} key={"country " + country.name}>
+        <div key={"country " + country.name}>
           <>
             {country.found && (
-              <div>
+              <div className={"country"}>
                 <p>
                   <h3>{country.name}</h3>
                 </p>
