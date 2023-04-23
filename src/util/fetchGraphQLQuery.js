@@ -1,5 +1,3 @@
-import React from "react";
-
 const graphURL = "https://countries.trevorblades.com/graphql";
 
 function fetchGraphQLQuery() {
