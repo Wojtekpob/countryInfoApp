@@ -28,14 +28,15 @@ function App() {
     if (chosenContinent == "") {
       throw new Error("First choose the continent");
     }
-    setFirstRun(false);
-    setCountryData("");
+
     let continentCountriesData = findContinentData().countries;
+
     let countries = generateCountries(
       numberOfCountries,
       continentCountriesData
     );
-
+    setFirstRun(false);
+    setCountryData("");
     setCountryData(getCountriesData(countries));
   };
 
