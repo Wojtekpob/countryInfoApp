@@ -1,0 +1,40 @@
+body {
+  background-color: rgb(164, 164, 164);
+  color: black;
+}
+
+.bottomDesc {
+  margin: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  display: inline-block;
+}
+
+input[type="number"] {
+  margin-left: 10px;
+  margin-right: 10px;
+  border: none;
+  border-bottom: 2px solid red;
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+}
+
+.submitButton {
+  background-color: #000400;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.submitButton:hover {
+  background-color: #0006b1; /* Green */
+  color: white;
+}

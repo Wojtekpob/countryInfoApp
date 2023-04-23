@@ -13,6 +13,7 @@ function separateList(array) {
 }
 
 function CountryInformationList({ countriesData }) {
+  countriesData.sort((a, b) => (a.name > b.name ? 1 : -1));
   return (
     <div className={"countryBox"}>
       {countriesData.map((country) => (
@@ -20,22 +21,31 @@ function CountryInformationList({ countriesData }) {
           <>
             {country.found && (
               <div>
-                <p>{country.name}</p>
-                <p>Capital: {country.capital}</p>
-                <p>Languages: {separateList(country.languages)}</p>
-                <p>Currency: {country.currency}</p>
-                <p>Region: {country.subregion}</p>
-                <p>Population: {country.population}</p>
+                <p>
+                  <h3>{country.name}</h3>
+                </p>
+                <p>
+                  <h4>Capital: {country.capital}</h4>
+                </p>
+                <p>
+                  <h4>Languages: {separateList(country.languages)}</h4>
+                </p>
+                <p>
+                  <h4>Currency: {country.currency}</h4>
+                </p>
+                <p>
+                  <h4>Region: {country.subregion}</h4>
+                </p>
+                <p>
+                  <h4>Population: {country.population}</h4>
+                </p>
               </div>
             )}
             {!country.found && (
               <div>
-                <p>No information found about: {country.name}</p>
-                <p>Capital: </p>
-                <p>Languages: </p>
-                <p>Currency: </p>
-                <p>Region: </p>
-                <p>Population: </p>
+                <p>
+                  <h3>No information found about: {country.name}</h3>
+                </p>
               </div>
             )}
           </>

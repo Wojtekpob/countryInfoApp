@@ -26,13 +26,12 @@ function fetchData(country) {
 }
 
 function getCountriesData(countries) {
-  const countryDataArray = [];
+  let countryDataArray = [];
   for (let i = 0; i < countries.length; i++) {
     fetchData(countries[i].name).then((data) => {
       countryDataArray.push(data);
     });
   }
-  console.log(countryDataArray);
   return countryDataArray;
 }
 
