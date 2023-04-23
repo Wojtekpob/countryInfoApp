@@ -2,7 +2,17 @@ import React from "react";
 
 const graphURL = "https://countries.trevorblades.com/graphql";
 
-function fetchGraphQLQuery(query) {
+function fetchGraphQLQuery() {
+  const query = `
+  query {
+    continents {
+      name
+      countries {
+        name
+      }
+    }
+  }
+  `;
   return fetch(graphURL, {
     method: "POST",
     headers: {
